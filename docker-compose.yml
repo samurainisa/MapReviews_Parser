@@ -1,0 +1,88 @@
+services:
+  app:
+    build:
+      context: ./backend
+    container_name: reviews-app
+    working_dir: /var/www/html
+    environment:
+      # Кэш браузеров Playwright (browser fallback парсера) в общем volume.
+      PLAYWRIGHT_BROWSERS_PATH: /ms-playwright
+    volumes:
+      - ./backend:/var/www/html
+      - playwright-cache:/ms-playwright
+    depends_on:
+      mysql:
+        condition: service_healthy
+      redis:
+        condition: service_started
+
+  queue:
+    build:
+      context: ./backend
+    container_name: reviews-queue
+    working_dir: /var/www/html
+    command: php artisan queue:work redis --tries=1 --timeout=120
+    restart: unless-stopped
+    environment:
+      PLAYWRIGHT_BROWSERS_PATH: /ms-playwright
+    volumes:
+      - ./backend:/var/www/html
+      - playwright-cache:/ms-playwright
+    depends_on:
+      mysql:
+        condition: service_healthy
+      redis:
+        condition: service_started
+
+  nginx:
+    image: nginx:alpine
+    container_name: reviews-nginx
+    ports:
+      - "8080:80"
+    volumes:
+      - ./backend:/var/www/html
+      - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - app
+
+  mysql:
+    image: mysql:8.0
+    container_name: reviews-mysql
+    environment:
+      MYSQL_DATABASE: reviews
+      MYSQL_USER: reviews
+      MYSQL_PASSWORD: secret
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "3307:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-proot"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+  redis:
+    image: redis:alpine
+    container_name: reviews-redis
+    ports:
+      - "6379:6379"
+
+  frontend:
+    build:
+      context: ./frontend
+    container_name: reviews-frontend
+    ports:
+      - "5173:5173"
+    environment:
+      VITE_API_BASE_URL: http://localhost:8080
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    depends_on:
+      - nginx
+
+volumes:
+  mysql-data:
+  playwright-cache:
