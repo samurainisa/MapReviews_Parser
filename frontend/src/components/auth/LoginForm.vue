@@ -31,11 +31,23 @@ async function onSubmit() {
 </script>
 
 <template>
-  <form class="login-form" @submit.prevent="onSubmit">
-    <h1 class="login-form__title">Вход</h1>
-    <p class="login-form__hint">Войдите, чтобы подключить карточку организации.</p>
+  <form
+    class="login-form"
+    @submit.prevent="onSubmit"
+  >
+    <h1 class="login-form__title">
+      Вход
+    </h1>
+    <p class="login-form__hint">
+      Войдите, чтобы подключить карточку организации.
+    </p>
 
-    <BaseAlert v-if="error" variant="danger">{{ error }}</BaseAlert>
+    <BaseAlert
+      v-if="error"
+      variant="danger"
+    >
+      {{ error }}
+    </BaseAlert>
 
     <BaseInput
       v-model="form.email"
@@ -54,7 +66,12 @@ async function onSubmit() {
       :disabled="auth.loading"
     />
 
-    <BaseButton type="submit" :loading="auth.loading">Войти</BaseButton>
+    <BaseButton
+      type="submit"
+      :loading="auth.loading"
+    >
+      Войти
+    </BaseButton>
   </form>
 </template>
 

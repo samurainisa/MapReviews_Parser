@@ -19,19 +19,39 @@ const emit = defineEmits<{ changePage: [page: number] }>()
 
 <template>
   <section class="reviews">
-    <h2 class="reviews__title">Отзывы</h2>
+    <h2 class="reviews__title">
+      Отзывы
+    </h2>
 
-    <BaseAlert v-if="error" variant="danger">{{ error }}</BaseAlert>
+    <BaseAlert
+      v-if="error"
+      variant="danger"
+    >
+      {{ error }}
+    </BaseAlert>
 
-    <BaseLoader v-else-if="loading && reviews.length === 0" label="Загружаем отзывы…" />
+    <BaseLoader
+      v-else-if="loading && reviews.length === 0"
+      label="Загружаем отзывы…"
+    />
 
-    <EmptyState v-else-if="reviews.length === 0" title="Отзывов пока нет">
+    <EmptyState
+      v-else-if="reviews.length === 0"
+      title="Отзывов пока нет"
+    >
       Когда отзывы появятся в источнике, они отобразятся здесь.
     </EmptyState>
 
     <template v-else>
-      <div class="reviews__list" :class="{ 'reviews__list--loading': loading }">
-        <ReviewCard v-for="review in reviews" :key="review.id" :review="review" />
+      <div
+        class="reviews__list"
+        :class="{ 'reviews__list--loading': loading }"
+      >
+        <ReviewCard
+          v-for="review in reviews"
+          :key="review.id"
+          :review="review"
+        />
       </div>
       <ReviewPagination
         v-if="meta"

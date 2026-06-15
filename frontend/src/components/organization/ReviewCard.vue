@@ -24,10 +24,19 @@ const stars = computed(() => {
   <article class="review">
     <div class="review__head">
       <span class="review__author">{{ author }}</span>
-      <span v-if="stars" class="review__stars" :title="`${review.rating} из 5`">{{ stars }}</span>
+      <span
+        v-if="stars"
+        class="review__stars"
+        :title="`${review.rating} из 5`"
+      >{{ stars }}</span>
     </div>
     <!-- Текст выводится через интерполяцию Vue (экранируется), без v-html. -->
-    <p class="review__text" :class="{ 'review__text--muted': !review.text }">{{ text }}</p>
+    <p
+      class="review__text"
+      :class="{ 'review__text--muted': !review.text }"
+    >
+      {{ text }}
+    </p>
     <span class="review__date">{{ date }}</span>
   </article>
 </template>

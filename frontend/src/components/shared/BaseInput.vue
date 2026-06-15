@@ -13,7 +13,10 @@ const model = defineModel<string>({ required: true })
 
 <template>
   <label class="field">
-    <span v-if="label" class="field__label">{{ label }}</span>
+    <span
+      v-if="label"
+      class="field__label"
+    >{{ label }}</span>
     <input
       v-model="model"
       class="field__input"
@@ -22,8 +25,11 @@ const model = defineModel<string>({ required: true })
       :placeholder="placeholder"
       :autocomplete="autocomplete"
       :disabled="disabled"
-    />
-    <span v-if="error" class="field__error">{{ error }}</span>
+    >
+    <span
+      v-if="error"
+      class="field__error"
+    >{{ error }}</span>
   </label>
 </template>
 

@@ -16,7 +16,10 @@ function go(page: number) {
 </script>
 
 <template>
-  <nav v-if="lastPage > 1" class="pagination">
+  <nav
+    v-if="lastPage > 1"
+    class="pagination"
+  >
     <BaseButton
       variant="secondary"
       :disabled="loading || currentPage <= 1"

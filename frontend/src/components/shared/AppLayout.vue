@@ -17,9 +17,17 @@ async function onLogout() {
     <header class="layout__header">
       <div class="layout__inner">
         <span class="layout__brand">Yandex Maps Reviews Connector</span>
-        <div v-if="auth.user" class="layout__user">
+        <div
+          v-if="auth.user"
+          class="layout__user"
+        >
           <span class="layout__email">{{ auth.user.email }}</span>
-          <BaseButton variant="secondary" @click="onLogout">Выйти</BaseButton>
+          <BaseButton
+            variant="secondary"
+            @click="onLogout"
+          >
+            Выйти
+          </BaseButton>
         </div>
       </div>
     </header>
