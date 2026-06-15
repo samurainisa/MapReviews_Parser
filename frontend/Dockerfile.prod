@@ -1,0 +1,16 @@
+# Прод-сборка SPA + раздача статики через nginx.
+# Этот же nginx проксирует /api и /sanctum на php-fpm (см. docker/nginx/prod.conf),
+# поэтому SPA и API живут на одном origin.
+
+FROM node:20-alpine AS build
+WORKDIR /app
+COPY package*.json ./
+RUN npm ci
+COPY . .
+# VITE_API_BASE_URL берётся из .env.production (пустой → относительные пути).
+RUN npm run build
+
+FROM nginx:alpine
+COPY --from=build /app/dist /usr/share/nginx/html
+# Конфиг монтируется через docker-compose.prod.yml (docker/nginx/prod.conf).
+EXPOSE 80

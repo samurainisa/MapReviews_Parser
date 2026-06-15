@@ -1,0 +1,81 @@
+# Прод-конфигурация (отдельно от dev docker-compose.yml).
+#
+# Запуск на сервере:
+#   1) создать /opt/mapreviews/.env с DB_PASSWORD / DB_ROOT_PASSWORD;
+#   2) создать backend/.env (на основе backend/.env.production.example) с APP_KEY и теми же DB-кредами;
+#   3) docker compose -f docker-compose.prod.yml up -d --build
+#   4) docker compose -f docker-compose.prod.yml exec app php artisan migrate --seed --force
+#
+# Секреты (DB_PASSWORD, DB_ROOT_PASSWORD) берутся из /opt/mapreviews/.env и в git не хранятся.
+
+services:
+  app:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile.prod
+    container_name: reviews-app
+    restart: unless-stopped
+    environment:
+      PLAYWRIGHT_BROWSERS_PATH: /ms-playwright
+    volumes:
+      - ./backend/.env:/var/www/html/.env:ro
+    depends_on:
+      mysql:
+        condition: service_healthy
+      redis:
+        condition: service_started
+
+  queue:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile.prod
+    container_name: reviews-queue
+    restart: unless-stopped
+    command: php artisan queue:work redis --tries=1 --timeout=180 --sleep=3
+    environment:
+      PLAYWRIGHT_BROWSERS_PATH: /ms-playwright
+    volumes:
+      - ./backend/.env:/var/www/html/.env:ro
+    depends_on:
+      mysql:
+        condition: service_healthy
+      redis:
+        condition: service_started
+
+  nginx:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile.prod
+    container_name: reviews-nginx
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    volumes:
+      - ./docker/nginx/prod.conf:/etc/nginx/conf.d/default.conf:ro
+    depends_on:
+      - app
+
+  mysql:
+    image: mysql:8.0
+    container_name: reviews-mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: reviews
+      MYSQL_USER: reviews
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+    volumes:
+      - mysql-data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-p${DB_ROOT_PASSWORD}"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+  redis:
+    image: redis:alpine
+    container_name: reviews-redis
+    restart: unless-stopped
+
+volumes:
+  mysql-data:
