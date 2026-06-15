@@ -75,10 +75,14 @@ function out(obj) {
     // Один элемент-обёртка на каждый отзыв в ленте (не вложенные подэлементы).
     const cardSelector = '.business-reviews-card-view__review';
 
-    // Прокрутка ленты, пока появляются новые отзывы или не достигнут лимит.
+    // Лента отзывов виртуализируется и подгружается по мере прокрутки. Надёжнее
+    // всего проматывать последнюю карточку в зону видимости — это работает
+    // независимо от того, какой именно элемент является скролл-контейнером.
     let previous = 0;
     let stagnant = 0;
-    for (let i = 0; i < 400 && stagnant < 4; i++) {
+    // Запас по застою больше для крупных карточек (~600 отзывов грузятся долго).
+    const maxStagnant = 8;
+    for (let i = 0; i < 1200 && stagnant < maxStagnant; i++) {
       const count = await page.locator(cardSelector).count();
       if (count >= MAX_REVIEWS) break;
       if (count === previous) stagnant++;
@@ -86,11 +90,26 @@ function out(obj) {
       previous = count;
 
       await page.evaluate((sel) => {
-        const el = document.querySelector(sel);
-        if (el) el.scrollBy(0, el.scrollHeight);
-        window.scrollTo(0, document.body.scrollHeight);
-      }, listSelector);
+        const cards = document.querySelectorAll(sel);
+        const last = cards[cards.length - 1];
+        if (last) last.scrollIntoView({ block: 'end' });
+        // Дополнительно проматываем потенциальный скролл-контейнер ленты.
+        const cont = document.querySelector('.scroll__container, [class*="reviews-card-view__reviews-container"]');
+        if (cont) cont.scrollTop = cont.scrollHeight;
+      }, cardSelector);
       await page.waitForTimeout(SCROLL_DELAY);
+    }
+
+    // Разворачиваем обрезанные тексты («Ещё»), чтобы сохранить отзыв целиком.
+    try {
+      await page.evaluate(() => {
+        document
+          .querySelectorAll('.business-review-view__expand, [class*="business-review-view__expand"]')
+          .forEach((btn) => btn.click());
+      });
+      await page.waitForTimeout(300);
+    } catch {
+      // Разворачивание не критично — продолжаем с тем, что есть.
     }
 
     const data = await page.evaluate(
