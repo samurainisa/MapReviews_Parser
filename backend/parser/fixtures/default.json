@@ -1,0 +1,970 @@
+{
+  "externalId": "1234567890",
+  "title": "Демо-организация (fixture)",
+  "address": "г. Москва, ул. Примерная, д. 1",
+  "rating": 4.6,
+  "ratingsCount": 1250,
+  "reviewsCount": 137,
+  "partial": false,
+  "reviews": [
+    {
+      "externalId": "demo-1000",
+      "authorName": "Иван Иванов",
+      "reviewDate": "2026-06-13",
+      "text": "Отличное место, всем рекомендую!",
+      "rating": 1
+    },
+    {
+      "externalId": "demo-1001",
+      "authorName": "Анна П.",
+      "reviewDate": "2026-06-12",
+      "text": "Обслуживание на высоте, вернусь ещё.",
+      "rating": 2
+    },
+    {
+      "externalId": "demo-1002",
+      "authorName": "Сергей К.",
+      "reviewDate": "2026-06-11",
+      "text": "Долго ждали заказ, но в итоге понравилось.",
+      "rating": 3
+    },
+    {
+      "externalId": "demo-1003",
+      "authorName": "Мария Л.",
+      "reviewDate": "2026-06-10",
+      "text": "Цены немного высокие, но качество того стоит.",
+      "rating": 4
+    },
+    {
+      "externalId": "demo-1004",
+      "authorName": "Дмитрий В.",
+      "reviewDate": "2026-06-09",
+      "text": "Не понравилось, больше не приду.",
+      "rating": 5
+    },
+    {
+      "externalId": "demo-1005",
+      "authorName": "Ольга С.",
+      "reviewDate": "2026-06-08",
+      "text": "Очень уютная атмосфера.",
+      "rating": 1
+    },
+    {
+      "externalId": "demo-1006",
+      "authorName": "Павел Р.",
+      "reviewDate": "2026-06-07",
+      "text": "Персонал вежливый и внимательный.",
+      "rating": 2
+    },
+    {
+      "externalId": "demo-1007",
+      "authorName": "Екатерина М.",
+      "reviewDate": "2026-06-06",
+      "text": "Среднее впечатление, ожидал большего.",
+      "rating": 3
+    },
+    {
+      "externalId": "demo-1008",
+      "authorName": "Николай Т.",
+      "reviewDate": "2026-06-05",
+      "text": null,
+      "rating": 4
+    },
+    {
+      "externalId": "demo-1009",
+      "authorName": "Юлия Ф.",
+      "reviewDate": "2026-06-04",
+      "text": "Прекрасный сервис и приятные цены.",
+      "rating": 5
+    },
+    {
+      "externalId": "demo-1010",
+      "authorName": null,
+      "reviewDate": "2026-06-03",
+      "text": "Были небольшие проблемы, но решили быстро.",
+      "rating": 1
+    },
+    {
+      "externalId": "demo-1011",
+      "authorName": "Алексей Д.",
+      "reviewDate": "2026-06-02",
+      "text": "Лучшее в городе!",
+      "rating": 2
+    },
+    {
+      "externalId": "demo-1012",
+      "authorName": "Татьяна Б.",
+      "reviewDate": "2026-06-01",
+      "text": "Отличное место, всем рекомендую!",
+      "rating": 3
+    },
+    {
+      "externalId": "demo-1013",
+      "authorName": "Роман Ж.",
+      "reviewDate": "2026-05-31",
+      "text": "Обслуживание на высоте, вернусь ещё.",
+      "rating": 4
+    },
+    {
+      "externalId": "demo-1014",
+      "authorName": "Светлана Н.",
+      "reviewDate": "2026-05-30",
+      "text": "Долго ждали заказ, но в итоге понравилось.",
+      "rating": 5
+    },
+    {
+      "externalId": "demo-1015",
+      "authorName": "Иван Иванов",
+      "reviewDate": "2026-05-29",
+      "text": "Цены немного высокие, но качество того стоит.",
+      "rating": 1
+    },
+    {
+      "externalId": "demo-1016",
+      "authorName": "Анна П.",
+      "reviewDate": "2026-05-28",
+      "text": "Не понравилось, больше не приду.",
+      "rating": 2
+    },
+    {
+      "externalId": "demo-1017",
+      "authorName": "Сергей К.",
+      "reviewDate": "2026-05-27",
+      "text": "Очень уютная атмосфера.",
+      "rating": 3
+    },
+    {
+      "externalId": "demo-1018",
+      "authorName": "Мария Л.",
+      "reviewDate": "2026-05-26",
+      "text": "Персонал вежливый и внимательный.",
+      "rating": 4
+    },
+    {
+      "externalId": "demo-1019",
+      "authorName": "Дмитрий В.",
+      "reviewDate": "2026-05-25",
+      "text": "Среднее впечатление, ожидал большего.",
+      "rating": 5
+    },
+    {
+      "externalId": "demo-1020",
+      "authorName": "Ольга С.",
+      "reviewDate": "2026-05-24",
+      "text": null,
+      "rating": 1
+    },
+    {
+      "externalId": "demo-1021",
+      "authorName": "Павел Р.",
+      "reviewDate": "2026-05-23",
+      "text": "Прекрасный сервис и приятные цены.",
+      "rating": 2
+    },
+    {
+      "externalId": "demo-1022",
+      "authorName": "Екатерина М.",
+      "reviewDate": "2026-05-22",
+      "text": "Были небольшие проблемы, но решили быстро.",
+      "rating": 3
+    },
+    {
+      "externalId": "demo-1023",
+      "authorName": "Николай Т.",
+      "reviewDate": "2026-05-21",
+      "text": "Лучшее в городе!",
+      "rating": 4
+    },
+    {
+      "externalId": "demo-1024",
+      "authorName": "Юлия Ф.",
+      "reviewDate": "2026-05-20",
+      "text": "Отличное место, всем рекомендую!",
+      "rating": 5
+    },
+    {
+      "externalId": "demo-1025",
+      "authorName": null,
+      "reviewDate": "2026-05-19",
+      "text": "Обслуживание на высоте, вернусь ещё.",
+      "rating": 1
+    },
+    {
+      "externalId": "demo-1026",
+      "authorName": "Алексей Д.",
+      "reviewDate": "2026-05-18",
+      "text": "Долго ждали заказ, но в итоге понравилось.",
+      "rating": 2
+    },
+    {
+      "externalId": "demo-1027",
+      "authorName": "Татьяна Б.",
+      "reviewDate": "2026-05-17",
+      "text": "Цены немного высокие, но качество того стоит.",
+      "rating": 3
+    },
+    {
+      "externalId": "demo-1028",
+      "authorName": "Роман Ж.",
+      "reviewDate": "2026-05-16",
+      "text": "Не понравилось, больше не приду.",
+      "rating": 4
+    },
+    {
+      "externalId": "demo-1029",
+      "authorName": "Светлана Н.",
+      "reviewDate": "2026-05-15",
+      "text": "Очень уютная атмосфера.",
+      "rating": 5
+    },
+    {
+      "externalId": "demo-1030",
+      "authorName": "Иван Иванов",
+      "reviewDate": "2026-05-14",
+      "text": "Персонал вежливый и внимательный.",
+      "rating": 1
+    },
+    {
+      "externalId": "demo-1031",
+      "authorName": "Анна П.",
+      "reviewDate": "2026-05-13",
+      "text": "Среднее впечатление, ожидал большего.",
+      "rating": 2
+    },
+    {
+      "externalId": "demo-1032",
+      "authorName": "Сергей К.",
+      "reviewDate": "2026-05-12",
+      "text": null,
+      "rating": 3
+    },
+    {
+      "externalId": "demo-1033",
+      "authorName": "Мария Л.",
+      "reviewDate": "2026-05-11",
+      "text": "Прекрасный сервис и приятные цены.",
+      "rating": 4
+    },
+    {
+      "externalId": "demo-1034",
+      "authorName": "Дмитрий В.",
+      "reviewDate": "2026-05-10",
+      "text": "Были небольшие проблемы, но решили быстро.",
+      "rating": 5
+    },
+    {
+      "externalId": "demo-1035",
+      "authorName": "Ольга С.",
+      "reviewDate": "2026-05-09",
+      "text": "Лучшее в городе!",
+      "rating": 1
+    },
+    {
+      "externalId": "demo-1036",
+      "authorName": "Павел Р.",
+      "reviewDate": "2026-05-08",
+      "text": "Отличное место, всем рекомендую!",
+      "rating": 2
+    },
+    {
+      "externalId": "demo-1037",
+      "authorName": "Екатерина М.",
+      "reviewDate": "2026-05-07",
+      "text": "Обслуживание на высоте, вернусь ещё.",
+      "rating": 3
+    },
+    {
+      "externalId": "demo-1038",
+      "authorName": "Николай Т.",
+      "reviewDate": "2026-05-06",
+      "text": "Долго ждали заказ, но в итоге понравилось.",
+      "rating": 4
+    },
+    {
+      "externalId": "demo-1039",
+      "authorName": "Юлия Ф.",
+      "reviewDate": "2026-05-05",
+      "text": "Цены немного высокие, но качество того стоит.",
+      "rating": 5
+    },
+    {
+      "externalId": "demo-1040",
+      "authorName": null,
+      "reviewDate": "2026-05-04",
+      "text": "Не понравилось, больше не приду.",
+      "rating": 1
+    },
+    {
+      "externalId": "demo-1041",
+      "authorName": "Алексей Д.",
+      "reviewDate": "2026-05-03",
+      "text": "Очень уютная атмосфера.",
+      "rating": 2
+    },
+    {
+      "externalId": "demo-1042",
+      "authorName": "Татьяна Б.",
+      "reviewDate": "2026-05-02",
+      "text": "Персонал вежливый и внимательный.",
+      "rating": 3
+    },
+    {
+      "externalId": "demo-1043",
+      "authorName": "Роман Ж.",
+      "reviewDate": "2026-05-01",
+      "text": "Среднее впечатление, ожидал большего.",
+      "rating": 4
+    },
+    {
+      "externalId": "demo-1044",
+      "authorName": "Светлана Н.",
+      "reviewDate": "2026-04-30",
+      "text": null,
+      "rating": 5
+    },
+    {
+      "externalId": "demo-1045",
+      "authorName": "Иван Иванов",
+      "reviewDate": "2026-04-29",
+      "text": "Прекрасный сервис и приятные цены.",
+      "rating": 1
+    },
+    {
+      "externalId": "demo-1046",
+      "authorName": "Анна П.",
+      "reviewDate": "2026-04-28",
+      "text": "Были небольшие проблемы, но решили быстро.",
+      "rating": 2
+    },
+    {
+      "externalId": "demo-1047",
+      "authorName": "Сергей К.",
+      "reviewDate": "2026-04-27",
+      "text": "Лучшее в городе!",
+      "rating": 3
+    },
+    {
+      "externalId": "demo-1048",
+      "authorName": "Мария Л.",
+      "reviewDate": "2026-04-26",
+      "text": "Отличное место, всем рекомендую!",
+      "rating": 4
+    },
+    {
+      "externalId": "demo-1049",
+      "authorName": "Дмитрий В.",
+      "reviewDate": "2026-04-25",
+      "text": "Обслуживание на высоте, вернусь ещё.",
+      "rating": 5
+    },
+    {
+      "externalId": "demo-1050",
+      "authorName": "Ольга С.",
+      "reviewDate": "2026-04-24",
+      "text": "Долго ждали заказ, но в итоге понравилось.",
+      "rating": 1
+    },
+    {
+      "externalId": "demo-1051",
+      "authorName": "Павел Р.",
+      "reviewDate": "2026-04-23",
+      "text": "Цены немного высокие, но качество того стоит.",
+      "rating": 2
+    },
+    {
+      "externalId": "demo-1052",
+      "authorName": "Екатерина М.",
+      "reviewDate": "2026-04-22",
+      "text": "Не понравилось, больше не приду.",
+      "rating": 3
+    },
+    {
+      "externalId": "demo-1053",
+      "authorName": "Николай Т.",
+      "reviewDate": "2026-04-21",
+      "text": "Очень уютная атмосфера.",
+      "rating": 4
+    },
+    {
+      "externalId": "demo-1054",
+      "authorName": "Юлия Ф.",
+      "reviewDate": "2026-04-20",
+      "text": "Персонал вежливый и внимательный.",
+      "rating": 5
+    },
+    {
+      "externalId": "demo-1055",
+      "authorName": null,
+      "reviewDate": "2026-04-19",
+      "text": "Среднее впечатление, ожидал большего.",
+      "rating": 1
+    },
+    {
+      "externalId": "demo-1056",
+      "authorName": "Алексей Д.",
+      "reviewDate": "2026-04-18",
+      "text": null,
+      "rating": 2
+    },
+    {
+      "externalId": "demo-1057",
+      "authorName": "Татьяна Б.",
+      "reviewDate": "2026-04-17",
+      "text": "Прекрасный сервис и приятные цены.",
+      "rating": 3
+    },
+    {
+      "externalId": "demo-1058",
+      "authorName": "Роман Ж.",
+      "reviewDate": "2026-04-16",
+      "text": "Были небольшие проблемы, но решили быстро.",
+      "rating": 4
+    },
+    {
+      "externalId": "demo-1059",
+      "authorName": "Светлана Н.",
+      "reviewDate": "2026-04-15",
+      "text": "Лучшее в городе!",
+      "rating": 5
+    },
+    {
+      "externalId": "demo-1060",
+      "authorName": "Иван Иванов",
+      "reviewDate": "2026-04-14",
+      "text": "Отличное место, всем рекомендую!",
+      "rating": 1
+    },
+    {
+      "externalId": "demo-1061",
+      "authorName": "Анна П.",
+      "reviewDate": "2026-04-13",
+      "text": "Обслуживание на высоте, вернусь ещё.",
+      "rating": 2
+    },
+    {
+      "externalId": "demo-1062",
+      "authorName": "Сергей К.",
+      "reviewDate": "2026-04-12",
+      "text": "Долго ждали заказ, но в итоге понравилось.",
+      "rating": 3
+    },
+    {
+      "externalId": "demo-1063",
+      "authorName": "Мария Л.",
+      "reviewDate": "2026-04-11",
+      "text": "Цены немного высокие, но качество того стоит.",
+      "rating": 4
+    },
+    {
+      "externalId": "demo-1064",
+      "authorName": "Дмитрий В.",
+      "reviewDate": "2026-04-10",
+      "text": "Не понравилось, больше не приду.",
+      "rating": 5
+    },
+    {
+      "externalId": "demo-1065",
+      "authorName": "Ольга С.",
+      "reviewDate": "2026-04-09",
+      "text": "Очень уютная атмосфера.",
+      "rating": 1
+    },
+    {
+      "externalId": "demo-1066",
+      "authorName": "Павел Р.",
+      "reviewDate": "2026-04-08",
+      "text": "Персонал вежливый и внимательный.",
+      "rating": 2
+    },
+    {
+      "externalId": "demo-1067",
+      "authorName": "Екатерина М.",
+      "reviewDate": "2026-04-07",
+      "text": "Среднее впечатление, ожидал большего.",
+      "rating": 3
+    },
+    {
+      "externalId": "demo-1068",
+      "authorName": "Николай Т.",
+      "reviewDate": "2026-04-06",
+      "text": null,
+      "rating": 4
+    },
+    {
+      "externalId": "demo-1069",
+      "authorName": "Юлия Ф.",
+      "reviewDate": "2026-04-05",
+      "text": "Прекрасный сервис и приятные цены.",
+      "rating": 5
+    },
+    {
+      "externalId": "demo-1070",
+      "authorName": null,
+      "reviewDate": "2026-04-04",
+      "text": "Были небольшие проблемы, но решили быстро.",
+      "rating": 1
+    },
+    {
+      "externalId": "demo-1071",
+      "authorName": "Алексей Д.",
+      "reviewDate": "2026-04-03",
+      "text": "Лучшее в городе!",
+      "rating": 2
+    },
+    {
+      "externalId": "demo-1072",
+      "authorName": "Татьяна Б.",
+      "reviewDate": "2026-04-02",
+      "text": "Отличное место, всем рекомендую!",
+      "rating": 3
+    },
+    {
+      "externalId": "demo-1073",
+      "authorName": "Роман Ж.",
+      "reviewDate": "2026-04-01",
+      "text": "Обслуживание на высоте, вернусь ещё.",
+      "rating": 4
+    },
+    {
+      "externalId": "demo-1074",
+      "authorName": "Светлана Н.",
+      "reviewDate": "2026-03-31",
+      "text": "Долго ждали заказ, но в итоге понравилось.",
+      "rating": 5
+    },
+    {
+      "externalId": "demo-1075",
+      "authorName": "Иван Иванов",
+      "reviewDate": "2026-03-30",
+      "text": "Цены немного высокие, но качество того стоит.",
+      "rating": 1
+    },
+    {
+      "externalId": "demo-1076",
+      "authorName": "Анна П.",
+      "reviewDate": "2026-03-29",
+      "text": "Не понравилось, больше не приду.",
+      "rating": 2
+    },
+    {
+      "externalId": "demo-1077",
+      "authorName": "Сергей К.",
+      "reviewDate": "2026-03-28",
+      "text": "Очень уютная атмосфера.",
+      "rating": 3
+    },
+    {
+      "externalId": "demo-1078",
+      "authorName": "Мария Л.",
+      "reviewDate": "2026-03-27",
+      "text": "Персонал вежливый и внимательный.",
+      "rating": 4
+    },
+    {
+      "externalId": "demo-1079",
+      "authorName": "Дмитрий В.",
+      "reviewDate": "2026-03-26",
+      "text": "Среднее впечатление, ожидал большего.",
+      "rating": 5
+    },
+    {
+      "externalId": "demo-1080",
+      "authorName": "Ольга С.",
+      "reviewDate": "2026-03-25",
+      "text": null,
+      "rating": 1
+    },
+    {
+      "externalId": "demo-1081",
+      "authorName": "Павел Р.",
+      "reviewDate": "2026-03-24",
+      "text": "Прекрасный сервис и приятные цены.",
+      "rating": 2
+    },
+    {
+      "externalId": "demo-1082",
+      "authorName": "Екатерина М.",
+      "reviewDate": "2026-03-23",
+      "text": "Были небольшие проблемы, но решили быстро.",
+      "rating": 3
+    },
+    {
+      "externalId": "demo-1083",
+      "authorName": "Николай Т.",
+      "reviewDate": "2026-03-22",
+      "text": "Лучшее в городе!",
+      "rating": 4
+    },
+    {
+      "externalId": "demo-1084",
+      "authorName": "Юлия Ф.",
+      "reviewDate": "2026-03-21",
+      "text": "Отличное место, всем рекомендую!",
+      "rating": 5
+    },
+    {
+      "externalId": "demo-1085",
+      "authorName": null,
+      "reviewDate": "2026-03-20",
+      "text": "Обслуживание на высоте, вернусь ещё.",
+      "rating": 1
+    },
+    {
+      "externalId": "demo-1086",
+      "authorName": "Алексей Д.",
+      "reviewDate": "2026-03-19",
+      "text": "Долго ждали заказ, но в итоге понравилось.",
+      "rating": 2
+    },
+    {
+      "externalId": "demo-1087",
+      "authorName": "Татьяна Б.",
+      "reviewDate": "2026-03-18",
+      "text": "Цены немного высокие, но качество того стоит.",
+      "rating": 3
+    },
+    {
+      "externalId": "demo-1088",
+      "authorName": "Роман Ж.",
+      "reviewDate": "2026-03-17",
+      "text": "Не понравилось, больше не приду.",
+      "rating": 4
+    },
+    {
+      "externalId": "demo-1089",
+      "authorName": "Светлана Н.",
+      "reviewDate": "2026-03-16",
+      "text": "Очень уютная атмосфера.",
+      "rating": 5
+    },
+    {
+      "externalId": "demo-1090",
+      "authorName": "Иван Иванов",
+      "reviewDate": "2026-03-15",
+      "text": "Персонал вежливый и внимательный.",
+      "rating": 1
+    },
+    {
+      "externalId": "demo-1091",
+      "authorName": "Анна П.",
+      "reviewDate": "2026-03-14",
+      "text": "Среднее впечатление, ожидал большего.",
+      "rating": 2
+    },
+    {
+      "externalId": "demo-1092",
+      "authorName": "Сергей К.",
+      "reviewDate": "2026-03-13",
+      "text": null,
+      "rating": 3
+    },
+    {
+      "externalId": "demo-1093",
+      "authorName": "Мария Л.",
+      "reviewDate": "2026-03-12",
+      "text": "Прекрасный сервис и приятные цены.",
+      "rating": 4
+    },
+    {
+      "externalId": "demo-1094",
+      "authorName": "Дмитрий В.",
+      "reviewDate": "2026-03-11",
+      "text": "Были небольшие проблемы, но решили быстро.",
+      "rating": 5
+    },
+    {
+      "externalId": "demo-1095",
+      "authorName": "Ольга С.",
+      "reviewDate": "2026-03-10",
+      "text": "Лучшее в городе!",
+      "rating": 1
+    },
+    {
+      "externalId": "demo-1096",
+      "authorName": "Павел Р.",
+      "reviewDate": "2026-03-09",
+      "text": "Отличное место, всем рекомендую!",
+      "rating": 2
+    },
+    {
+      "externalId": "demo-1097",
+      "authorName": "Екатерина М.",
+      "reviewDate": "2026-03-08",
+      "text": "Обслуживание на высоте, вернусь ещё.",
+      "rating": 3
+    },
+    {
+      "externalId": "demo-1098",
+      "authorName": "Николай Т.",
+      "reviewDate": "2026-03-07",
+      "text": "Долго ждали заказ, но в итоге понравилось.",
+      "rating": 4
+    },
+    {
+      "externalId": "demo-1099",
+      "authorName": "Юлия Ф.",
+      "reviewDate": "2026-03-06",
+      "text": "Цены немного высокие, но качество того стоит.",
+      "rating": 5
+    },
+    {
+      "externalId": "demo-1100",
+      "authorName": null,
+      "reviewDate": "2026-03-05",
+      "text": "Не понравилось, больше не приду.",
+      "rating": 1
+    },
+    {
+      "externalId": "demo-1101",
+      "authorName": "Алексей Д.",
+      "reviewDate": "2026-03-04",
+      "text": "Очень уютная атмосфера.",
+      "rating": 2
+    },
+    {
+      "externalId": "demo-1102",
+      "authorName": "Татьяна Б.",
+      "reviewDate": "2026-03-03",
+      "text": "Персонал вежливый и внимательный.",
+      "rating": 3
+    },
+    {
+      "externalId": "demo-1103",
+      "authorName": "Роман Ж.",
+      "reviewDate": "2026-03-02",
+      "text": "Среднее впечатление, ожидал большего.",
+      "rating": 4
+    },
+    {
+      "externalId": "demo-1104",
+      "authorName": "Светлана Н.",
+      "reviewDate": "2026-03-01",
+      "text": null,
+      "rating": 5
+    },
+    {
+      "externalId": "demo-1105",
+      "authorName": "Иван Иванов",
+      "reviewDate": "2026-02-28",
+      "text": "Прекрасный сервис и приятные цены.",
+      "rating": 1
+    },
+    {
+      "externalId": "demo-1106",
+      "authorName": "Анна П.",
+      "reviewDate": "2026-02-27",
+      "text": "Были небольшие проблемы, но решили быстро.",
+      "rating": 2
+    },
+    {
+      "externalId": "demo-1107",
+      "authorName": "Сергей К.",
+      "reviewDate": "2026-02-26",
+      "text": "Лучшее в городе!",
+      "rating": 3
+    },
+    {
+      "externalId": "demo-1108",
+      "authorName": "Мария Л.",
+      "reviewDate": "2026-02-25",
+      "text": "Отличное место, всем рекомендую!",
+      "rating": 4
+    },
+    {
+      "externalId": "demo-1109",
+      "authorName": "Дмитрий В.",
+      "reviewDate": "2026-02-24",
+      "text": "Обслуживание на высоте, вернусь ещё.",
+      "rating": 5
+    },
+    {
+      "externalId": "demo-1110",
+      "authorName": "Ольга С.",
+      "reviewDate": "2026-02-23",
+      "text": "Долго ждали заказ, но в итоге понравилось.",
+      "rating": 1
+    },
+    {
+      "externalId": "demo-1111",
+      "authorName": "Павел Р.",
+      "reviewDate": "2026-02-22",
+      "text": "Цены немного высокие, но качество того стоит.",
+      "rating": 2
+    },
+    {
+      "externalId": "demo-1112",
+      "authorName": "Екатерина М.",
+      "reviewDate": "2026-02-21",
+      "text": "Не понравилось, больше не приду.",
+      "rating": 3
+    },
+    {
+      "externalId": "demo-1113",
+      "authorName": "Николай Т.",
+      "reviewDate": "2026-02-20",
+      "text": "Очень уютная атмосфера.",
+      "rating": 4
+    },
+    {
+      "externalId": "demo-1114",
+      "authorName": "Юлия Ф.",
+      "reviewDate": "2026-02-19",
+      "text": "Персонал вежливый и внимательный.",
+      "rating": 5
+    },
+    {
+      "externalId": "demo-1115",
+      "authorName": null,
+      "reviewDate": "2026-02-18",
+      "text": "Среднее впечатление, ожидал большего.",
+      "rating": 1
+    },
+    {
+      "externalId": "demo-1116",
+      "authorName": "Алексей Д.",
+      "reviewDate": "2026-02-17",
+      "text": null,
+      "rating": 2
+    },
+    {
+      "externalId": "demo-1117",
+      "authorName": "Татьяна Б.",
+      "reviewDate": "2026-02-16",
+      "text": "Прекрасный сервис и приятные цены.",
+      "rating": 3
+    },
+    {
+      "externalId": "demo-1118",
+      "authorName": "Роман Ж.",
+      "reviewDate": "2026-02-15",
+      "text": "Были небольшие проблемы, но решили быстро.",
+      "rating": 4
+    },
+    {
+      "externalId": "demo-1119",
+      "authorName": "Светлана Н.",
+      "reviewDate": "2026-02-14",
+      "text": "Лучшее в городе!",
+      "rating": 5
+    },
+    {
+      "externalId": "demo-1120",
+      "authorName": "Иван Иванов",
+      "reviewDate": "2026-02-13",
+      "text": "Отличное место, всем рекомендую!",
+      "rating": 1
+    },
+    {
+      "externalId": "demo-1121",
+      "authorName": "Анна П.",
+      "reviewDate": "2026-02-12",
+      "text": "Обслуживание на высоте, вернусь ещё.",
+      "rating": 2
+    },
+    {
+      "externalId": "demo-1122",
+      "authorName": "Сергей К.",
+      "reviewDate": "2026-02-11",
+      "text": "Долго ждали заказ, но в итоге понравилось.",
+      "rating": 3
+    },
+    {
+      "externalId": "demo-1123",
+      "authorName": "Мария Л.",
+      "reviewDate": "2026-02-10",
+      "text": "Цены немного высокие, но качество того стоит.",
+      "rating": 4
+    },
+    {
+      "externalId": "demo-1124",
+      "authorName": "Дмитрий В.",
+      "reviewDate": "2026-02-09",
+      "text": "Не понравилось, больше не приду.",
+      "rating": 5
+    },
+    {
+      "externalId": "demo-1125",
+      "authorName": "Ольга С.",
+      "reviewDate": "2026-02-08",
+      "text": "Очень уютная атмосфера.",
+      "rating": 1
+    },
+    {
+      "externalId": "demo-1126",
+      "authorName": "Павел Р.",
+      "reviewDate": "2026-02-07",
+      "text": "Персонал вежливый и внимательный.",
+      "rating": 2
+    },
+    {
+      "externalId": "demo-1127",
+      "authorName": "Екатерина М.",
+      "reviewDate": "2026-02-06",
+      "text": "Среднее впечатление, ожидал большего.",
+      "rating": 3
+    },
+    {
+      "externalId": "demo-1128",
+      "authorName": "Николай Т.",
+      "reviewDate": "2026-02-05",
+      "text": null,
+      "rating": 4
+    },
+    {
+      "externalId": "demo-1129",
+      "authorName": "Юлия Ф.",
+      "reviewDate": "2026-02-04",
+      "text": "Прекрасный сервис и приятные цены.",
+      "rating": 5
+    },
+    {
+      "externalId": "demo-1130",
+      "authorName": null,
+      "reviewDate": "2026-02-03",
+      "text": "Были небольшие проблемы, но решили быстро.",
+      "rating": 1
+    },
+    {
+      "externalId": "demo-1131",
+      "authorName": "Алексей Д.",
+      "reviewDate": "2026-02-02",
+      "text": "Лучшее в городе!",
+      "rating": 2
+    },
+    {
+      "externalId": "demo-1132",
+      "authorName": "Татьяна Б.",
+      "reviewDate": "2026-02-01",
+      "text": "Отличное место, всем рекомендую!",
+      "rating": 3
+    },
+    {
+      "externalId": "demo-1133",
+      "authorName": "Роман Ж.",
+      "reviewDate": "2026-01-31",
+      "text": "Обслуживание на высоте, вернусь ещё.",
+      "rating": 4
+    },
+    {
+      "externalId": "demo-1134",
+      "authorName": "Светлана Н.",
+      "reviewDate": "2026-01-30",
+      "text": "Долго ждали заказ, но в итоге понравилось.",
+      "rating": 5
+    },
+    {
+      "externalId": "demo-1135",
+      "authorName": "Иван Иванов",
+      "reviewDate": "2026-01-29",
+      "text": "Цены немного высокие, но качество того стоит.",
+      "rating": 1
+    },
+    {
+      "externalId": "demo-1136",
+      "authorName": "Анна П.",
+      "reviewDate": "2026-01-28",
+      "text": "Не понравилось, больше не приду.",
+      "rating": 2
+    }
+  ]
+}
