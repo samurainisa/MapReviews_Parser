@@ -4,8 +4,15 @@ defineProps<{ title?: string }>()
 
 <template>
   <div class="empty">
-    <p v-if="title" class="empty__title">{{ title }}</p>
-    <p class="empty__text"><slot /></p>
+    <p
+      v-if="title"
+      class="empty__title"
+    >
+      {{ title }}
+    </p>
+    <p class="empty__text">
+      <slot />
+    </p>
   </div>
 </template>
 

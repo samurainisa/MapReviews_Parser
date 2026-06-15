@@ -20,7 +20,14 @@ const store = useOrganizationStore()
 const { organization, loading, saving, isParsing } = storeToRefs(store)
 const { reviews, meta, loading: reviewsLoading, error: reviewsError, fetchPage } = useReviews()
 
-const currentPage = computed(() => Math.max(1, Number(route.query.page) || 1))
+/** Безопасный разбор ?page=: query-значение может быть string | string[] | null. */
+function parsePage(value: unknown): number {
+  const raw = Array.isArray(value) ? value[0] : value
+  const n = typeof raw === 'string' ? Number.parseInt(raw, 10) : NaN
+  return Number.isInteger(n) && n >= 1 ? n : 1
+}
+
+const currentPage = computed(() => parsePage(route.query.page))
 
 const { start: startPolling } = usePolling(async () => {
   await store.fetch()
@@ -73,15 +80,23 @@ onMounted(async () => {
   <AppLayout>
     <div class="settings">
       <section class="settings__form-block">
-        <h1 class="settings__title">Карточка организации</h1>
+        <h1 class="settings__title">
+          Карточка организации
+        </h1>
         <p class="settings__lead">
           Вставьте ссылку на карточку организации в Яндекс.Картах — мы получим
           рейтинг, счётчики и отзывы.
         </p>
-        <OrganizationUrlForm :initial-url="organization?.source_url" @saved="onSaved" />
+        <OrganizationUrlForm
+          :initial-url="organization?.source_url"
+          @saved="onSaved"
+        />
       </section>
 
-      <BaseLoader v-if="loading && !organization" label="Загружаем данные…" />
+      <BaseLoader
+        v-if="loading && !organization"
+        label="Загружаем данные…"
+      />
 
       <EmptyState
         v-else-if="!organization"
@@ -94,8 +109,15 @@ onMounted(async () => {
       <template v-else>
         <OrganizationParseStatus :organization="organization" />
 
-        <div v-if="organization.parse_status === 'completed' || organization.parse_status === 'failed'" class="settings__actions">
-          <BaseButton variant="secondary" :loading="saving" @click="onRefresh">
+        <div
+          v-if="organization.parse_status === 'completed' || organization.parse_status === 'failed'"
+          class="settings__actions"
+        >
+          <BaseButton
+            variant="secondary"
+            :loading="saving"
+            @click="onRefresh"
+          >
             Обновить отзывы
           </BaseButton>
         </div>

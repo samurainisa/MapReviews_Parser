@@ -20,9 +20,21 @@ const heading = computed(
 <template>
   <section class="summary">
     <header class="summary__head">
-      <h2 class="summary__title">{{ heading }}</h2>
-      <p v-if="organization.address" class="summary__address">{{ organization.address }}</p>
-      <a class="summary__link" :href="organization.normalized_url ?? organization.source_url" target="_blank" rel="noopener">
+      <h2 class="summary__title">
+        {{ heading }}
+      </h2>
+      <p
+        v-if="organization.address"
+        class="summary__address"
+      >
+        {{ organization.address }}
+      </p>
+      <a
+        class="summary__link"
+        :href="organization.normalized_url ?? organization.source_url"
+        target="_blank"
+        rel="noopener"
+      >
         Открыть в Яндекс.Картах
       </a>
     </header>
@@ -46,7 +58,10 @@ const heading = computed(
       </div>
     </div>
 
-    <p v-if="formattedDate" class="summary__meta">
+    <p
+      v-if="formattedDate"
+      class="summary__meta"
+    >
       Последнее обновление: {{ formattedDate }}
     </p>
   </section>

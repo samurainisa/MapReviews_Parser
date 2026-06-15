@@ -39,7 +39,10 @@ async function onSubmit() {
 </script>
 
 <template>
-  <form class="url-form" @submit.prevent="onSubmit">
+  <form
+    class="url-form"
+    @submit.prevent="onSubmit"
+  >
     <BaseInput
       v-model="url"
       label="Ссылка на карточку организации в Яндекс.Картах"
@@ -47,7 +50,10 @@ async function onSubmit() {
       :error="localError ?? store.formError"
       :disabled="store.saving"
     />
-    <BaseButton type="submit" :loading="store.saving">
+    <BaseButton
+      type="submit"
+      :loading="store.saving"
+    >
       Сохранить и получить отзывы
     </BaseButton>
   </form>

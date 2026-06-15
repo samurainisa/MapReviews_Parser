@@ -44,7 +44,12 @@ const message = computed(() => {
 
 <template>
   <BaseAlert :variant="variant">
-    <BaseLoader v-if="isParsing" :label="message" />
-    <template v-else>{{ message }}</template>
+    <BaseLoader
+      v-if="isParsing"
+      :label="message"
+    />
+    <template v-else>
+      {{ message }}
+    </template>
   </BaseAlert>
 </template>

@@ -4,8 +4,14 @@ defineProps<{ label?: string }>()
 
 <template>
   <div class="loader">
-    <span class="loader__spinner" aria-hidden="true" />
-    <span v-if="label" class="loader__label">{{ label }}</span>
+    <span
+      class="loader__spinner"
+      aria-hidden="true"
+    />
+    <span
+      v-if="label"
+      class="loader__label"
+    >{{ label }}</span>
   </div>
 </template>
 

@@ -17,7 +17,11 @@ withDefaults(
     :class="[`btn--${variant}`]"
     :disabled="disabled || loading"
   >
-    <span v-if="loading" class="btn__spinner" aria-hidden="true" />
+    <span
+      v-if="loading"
+      class="btn__spinner"
+      aria-hidden="true"
+    />
     <slot />
   </button>
 </template>

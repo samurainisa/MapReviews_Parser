@@ -6,7 +6,11 @@ withDefaults(
 </script>
 
 <template>
-  <div class="alert" :class="`alert--${variant}`" role="alert">
+  <div
+    class="alert"
+    :class="`alert--${variant}`"
+    role="alert"
+  >
     <slot />
   </div>
 </template>
